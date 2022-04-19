@@ -1,0 +1,44 @@
+﻿@model RegistroClientes.Models.Registros
+
+@{
+    ViewBag.Title = "registrarcliente";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>registrar cliente</h2>
+
+
+<div class="row" style="margin-top: 30px">
+
+    <div class="col-sm-12">
+        <div class="panel panel-warning">
+            <div class="panel-heading">
+                <h4>Nuevo contacto</h4>
+            </div>
+            <div class="panel-body">
+                <form action="@Url.Action("registrarcliente","Registros")" method="post">
+                    <div class="form-group">
+                        <label form="txtnombre">Cedula</label>
+                        <input type="text" class="form-control" name="Cedula" />
+
+                    </div>
+                    <div class="form-group">
+                        <label form="txtnombre">Nombre</label>
+                        <input type="text" class="form-control" name="Nombre" />
+
+                    </div>
+                    <div class="form-group">
+                        <label form="txtnombre">Apellidos</label>
+                        <input type="text" class="form-control" name="Apellidos" />
+
+                    </div>
+                    <button type="submit" class="btn btn-primary">Registrar</button>
+                    <a class="btn bnt-warning" href="@Url.Action("Inicio","Registros")">Volver</a>
+                    <hr />
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+</div>
